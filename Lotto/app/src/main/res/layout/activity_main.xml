@@ -35,6 +35,38 @@
             android:backgroundTint="#99C8C2C2"
             app:cornerRadius="80dp"
             tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/buttonNum2"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/buttonNum3"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/buttonNum4"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/buttonNum5"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#99C8C2C2"
+            app:cornerRadius="80dp"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
