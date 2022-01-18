@@ -13,11 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val num1 = findViewById<Button>(R.id.lottoNum1)
+
         findViewById<FloatingActionButton>(R.id.runButton).setOnClickListener {
             Log.d("로또 앱", "버튼 누름")
 
-            findViewById<Button>(R.id.lottoNum1).text = "45"
-            findViewById<Button>(R.id.lottoNum1).backgroundTintList = ColorStateList.valueOf(Color.rgb(255, 0, 0))
+            num1.text = "45"
+            num1.backgroundTintList = ColorStateList.valueOf(Color.rgb(255, 0, 0))
         }
     }
 }
