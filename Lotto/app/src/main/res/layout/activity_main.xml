@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/buttonNum1"
+            android:id="@+id/lottoNum1"
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
