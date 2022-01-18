@@ -37,7 +37,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/buttonNum2"
+            android:id="@+id/lottoNum2"
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
@@ -45,7 +45,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/buttonNum3"
+            android:id="@+id/lottoNum3"
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
@@ -53,7 +53,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/buttonNum4"
+            android:id="@+id/lottoNum4"
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
@@ -61,7 +61,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/buttonNum5"
+            android:id="@+id/lottoNum5"
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
@@ -69,7 +69,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/buttonNum6"
+            android:id="@+id/lottoNum6"
             android:layout_width="70dp"
             android:layout_height="80dp"
             android:backgroundTint="#99C8C2C2"
