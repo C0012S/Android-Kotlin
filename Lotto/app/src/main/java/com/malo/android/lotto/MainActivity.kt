@@ -10,7 +10,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    val random = Random() // 랜덤 값을 사용할 수 있도록 선언
+    private val random = Random() // 랜덤 값을 사용할 수 있도록 선언
+    private val numbers = arrayListOf<Int>() // 번호를 저장할 배열 생성
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<FloatingActionButton>(R.id.runButton).setOnClickListener {
             Log.d("로또 앱", "버튼 누름")
 
+            numbers.clear()
+
             setLottoNum(num1)
             setLottoNum(num2)
             setLottoNum(num3)
@@ -35,8 +38,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun setLottoNum(lottoNum: Button) {
-        lottoNum.text = "${random.nextInt(45) + 1}"
-        lottoNum.backgroundTintList = ColorStateList.valueOf(Color.rgb(86, 88, 88))
+    private fun setLottoNum(lottoNum: Button) {
+        var num = 0
+        while(true) { // 중복되지 않도록 num에 임의의 정수 지정
+            num = random.nextInt(45) + 1
+            if (!numbers.contains(num)) {
+                numbers.add(num)
+                break
+            }
+        }
+
+        lottoNum.text = "${num}"
+
+        if (num <= 10) { // 1~10 : 노란색
+            lottoNum.backgroundTintList = ColorStateList.valueOf(Color.rgb(255, 255, 0))
+        }
+        else if (num <= 20) { // 11~20 : 파란색
+            lottoNum.backgroundTintList = ColorStateList.valueOf(Color.rgb(0, 0, 255))
+        }
+        else if (num <= 30) { // 21~30 : 빨간색
+            lottoNum.backgroundTintList = ColorStateList.valueOf(Color.rgb(255, 0, 0))
+        }
+        else if (num <= 40) { // 31~40 : 회색
+            lottoNum.backgroundTintList = ColorStateList.valueOf(Color.rgb(86, 88, 88))
+        }
+        else { // 41~45 : 초록색
+            lottoNum.backgroundTintList = ColorStateList.valueOf(Color.rgb(0, 255, 0))
+        }
     }
 }
