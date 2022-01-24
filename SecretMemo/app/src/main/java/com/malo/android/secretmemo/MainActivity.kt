@@ -11,16 +11,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val editText = findViewById<EditText>(R.id.editTextNumberPassword)
+        val editEmail = findViewById<EditText>(R.id.editEmail)
+        val editPassword = findViewById<EditText>(R.id.editPassword)
 
         findViewById<Button>(R.id.button).setOnClickListener {
-            val passwordText = editText.text.toString()
+            val emailText = editEmail.text.toString()
+            val passwordText = editPassword.text.toString()
 
-            if (passwordText == "12345678") {
-                Log.d("Secret Memo", "통과.")
+            if (emailText == "aaa@gmail.com") {
+                if (passwordText == "12345678") { // 이메일과 비밀번호가 맞을 경우
+                    Log.d("Secret Memo", "통과.")
+                }
+                else { // 이메일이 맞지만 비밀번호가 틀렸을 경우
+                    Log.d("Secret Memo", "비밀번호가 틀렸어요.")
+                }
             }
-            else {
-                Log.d("Secret Memo", "틀렸어요.")
+            else { // 이메일이 틀렸을 경우
+                Log.d("Secret Memo", "이메일이 틀렸어요.")
             }
         }
     }
